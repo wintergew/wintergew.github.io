@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Timer</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="timer-container">
+            <div class="timer-group">
+                <div id="timer">00:00</div>
+                <div id="questionTimer">00:00</div>
+            </div>
+            <div class="controls">
+                <button id="startBtn">Start</button>
+                <button id="nextBtn">Next Question</button>
+                <button id="resetBtn">Reset All</button>
+            </div>
+            <div class="stats-container">
+                <h3>Statistics</h3>
+                <div class="stat-item">
+                    <span>W/A/B:</span>
+                    <span class="time-stats">
+                        <span class="worst">00:00</span>
+                        <span>/</span>
+                        <span class="average">00:00</span>
+                        <span>/</span>
+                        <span class="best">00:00</span>
+                    </span>
+                </div>
+                <div class="stat-item questions-stat">
+                    <span>Questions:</span>
+                    <span class="question-counts">
+                        <span id="remainingCount">0</span>
+                        <span>/</span>
+                        <span id="totalCount">20</span>
+                        <button class="edit-total" title="Edit total questions">
+                            <i class="fas fa-pen"></i>
+                        </button>
+                    </span>
+                </div>
+                <div class="stat-item">
+                    <span>ETF:</span>
+                    <span id="etf">00:00:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 
