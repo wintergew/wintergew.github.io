@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emre's tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --success-color: #27ae60;
+            --danger-color: #c0392b;
+            --next-color: #3498db;
+            --background-color: #f5f6fa;
+            --transition-time: 0.3s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--background-color);
+            color: var(--primary-color);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+        }
+
+        .welcome {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #666;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform var(--transition-time);
+            display: flex;
+            gap: 1rem;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .project-icon {
+            font-size: 2rem;
+            color: var(--next-color);
+            width: 50px;
+            text-align: center;
+        }
+
+        .project-content {
+            flex: 1;
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .project-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .coming-soon {
+            opacity: 0.7;
+            position: relative;
+        }
+
+        .coming-soon::after {
+            content: "Coming Soon";
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: var(--next-color);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .section-title {
+            margin-top: 4rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tools</h1>
+        <p class="welcome">Welcome to my github site, where I share the small tools I've made.</p>
+
+        <div class="projects-grid">
+            <a href="/qtimer" class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-stopwatch"></i>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">QTimer</h2>
+                    <p class="project-description">A quiz timer for your exams. It has a statistics section to see your worst, best and average times. It also can estimate your completion time.</p>
+                </div>
+            </a>
+
+            <a href="/trsubfix" class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-file-export"></i>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">TRSubfix</h2>
+                    <p class="project-description">A certain turkish subtitle site still incorrectly encodes their subtitles. This tool fixes it.</p>
+                </div>
+            </a>
+        </div>
+
+        <h1 class="section-title">My other sites</h1>
+        <p class="welcome">Here are my other sites. Feel free to visit them.</p>
+        <div class="projects-grid">
+            <a href="https://portfolio.emrevarci.dev" class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">Portfolio</h2>
+                    <p class="project-description">This is where I share my more professional projects.</p>
+                </div>
+            </a>
+
+            <a href="https://blog.emrevarci.dev" class="project-card">
+                <div class="project-icon">
+                    <i class="fas fa-blog"></i>
+                </div>
+                <div class="project-content">
+                    <h2 class="project-title">Blog</h2>
+                    <p class="project-description">My blog where I share my thoughts.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html> 
